@@ -1,0 +1,29 @@
+{% for post in userposts %}
+<div class="card text-center">
+    <div class="card-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="card-title text-lg-left">
+                        {{ post['title'] }}
+                    </h2>
+                </div>
+                <div class="col-sm-2">
+                    <h4 class="card-subtitle post-header">
+                        {{ post['author'] }}
+                    </h4>
+                </div>
+                <div class="col-sm-2">
+                    <label class="post-header text-center">Pic here.</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card-block">
+        <p class="text-left">
+            {{ post['text'] }}
+        </p>
+    </div>
+</div>
+{% endfor %}

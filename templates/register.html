@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Homepage{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block js %}
+<script src="{{ url_for('static', filename='js/register.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-small text-center">
+    <form class="completed" id="register">
+         <h2 class="form-signin-heading">Register here!</h2>
+         <p id="register_message" class="error"></p>
+         
+         <label for="EmailText" class="sr-only">Email address</label>
+         <input name="input_email" type="email" id="input_email" class="form-control" placeholder="Email address" required autofocus style="margin:5px 0px;">
+         
+         <label for="PasswordText" class="sr-only">Password</label>
+         <input name="input_password" type="password" id="input_password" class="form-control" placeholder="Password" required style="margin:5px 0px;">
+         
+         <label for="PasswordText" class="sr-only">Confirm password</label>
+         <input name="input_password_confirm" type="password" id="input_password_confirm" class="form-control" placeholder="Confirm password" required style="margin:5px 0px;">
+         
+         <button class="btn btn-lg btn-primary btn-block" type="submit">Register!</button>
+      </form>
+</div>
+{% endblock %}

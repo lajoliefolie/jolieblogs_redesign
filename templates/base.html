@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JB | {% block title%}{% endblock %}</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jolieblogs - simple blogging site!">
+    <meta name="author" content="Christine Lewis">
+    
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto Slab'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/jolieblogs.css') }}" rel="stylesheet" type="text/css">
+    {% block css %}{% endblock %}
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    {% block js %}{% endblock %}
+    
+</head>
+<body>
+    <nav class="navbar navbar-toggleable-sm fixed-top navbar-light">
+        <div class="container main-width">
+            <div class="row main-width">
+                <div class="col-sm-6">
+                    <a href="{{ url_for('homepage.homepage_view') }}"><h1 class="header-item">Jolieblogs</h1></a>
+                </div>
+                <div class="col-sm-6">
+                    {% if current_user.is_authenticated %}
+                        <a class="btn header-btn pull-right" href="">Profile</a></li>
+                        <a class="btn header-btn pull-right" href="{{ url_for('logout.logout_view') }}">Logout</a></li>
+                    {% else %}
+                        <a class="btn header-btn pull-right" href="{{ url_for('register.register_view') }}">Register</a></li>
+                        <a class="btn header-btn pull-right" href="{{ url_for('login.login_view') }}">Login</a></li>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container content" style="width:940px;">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

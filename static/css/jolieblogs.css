@@ -1,0 +1,90 @@
+/** {*/
+/*    border: 1px solid black;*/
+/*}*/
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+body {
+  font-family: 'Roboto Slab';
+}
+.btn {
+    background-color: #aa78a6;
+    color: #ffffff;
+    border: 2px solid #34113f;
+}
+.header-btn{
+    width: 112px !important;
+    margin-left: 10px;
+}
+.btn:hover{
+    background-color:#34113f;
+    border: 2px solid #34113f;
+}
+.card-header{
+    background-color: #a997df;
+}
+.card {
+    border: 1px solid #4f517d;
+}
+.center{
+  margin:0 auto !important;
+}
+.header-item {
+    display: block;
+    margin: auto;
+    height: auto;
+}
+.post-header {
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+.navbar{
+    background-color: #a997df;
+    color: white;
+    border-bottom: 2px solid #4f517d;
+}
+.col {
+    padding-top: 92px;
+}
+.left-col {
+    border-right: 1px solid #4f517d;
+}
+.right-col {
+    border-left: 1px solid #4f517d;
+}
+.fullheight {
+    height: 100vh;
+}
+.card {
+    margin-top: 40px;
+}
+.content {
+    margin-top: 80px;
+}
+.content-block {
+    display: block;
+    margin: auto;
+    height: auto;
+}
+.pull-right {
+    float: right!important;
+}
+.pull-left {
+    float: left!important;
+}
+.jumbotron-small {
+    width: 500px;
+    margin: auto;
+}
+.main-width {
+    width: 940px;
+}
+.error {
+  color: #F50202;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'lucida sans';
+}

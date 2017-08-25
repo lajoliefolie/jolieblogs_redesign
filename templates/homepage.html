@@ -2,11 +2,15 @@
 {% block title %}Homepage{% endblock %}
 
 {% block css %}
+
 {% endblock %}
 
 {% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/userposts.js') }}"></script>
 {% endblock %}
 
 {% block content %}
-    Hi!
+<div id="makepost"></div>
+<div id="userposts"></div>
 {% endblock %}
